@@ -13,11 +13,11 @@
 		body{
 			background: #000;
 		}
-		img{
+		.img{
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			margin-left: -50px;
+			margin-left: -150px;
 			margin-top: -25px;
 			width: 100px;
 			height: 50px;
@@ -26,9 +26,52 @@
 			background-size: 20px 20px;
 			background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%);
 		}
+		input{
+			display: none;
+		}
+		label{
+			cursor: pointer
+		}
+		.rd+label{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			display: inline-block;
+			background-image: url('http://p1.bqimg.com/567571/99322cf8c3283e42.png');
+			background-size: 100px 50px;
+			background-position: 79px -8px;
+		}
+		.rd:checked+label{
+			background-position: 43px -8px;
+		}
+		.ck+label{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			display: inline-block;
+			background-image: url('http://p1.bqimg.com/567571/99322cf8c3283e42.png');
+			background-size: 100px 50px;
+			background-position: 79px 20px;
+		}
+		.ck:checked+.checkbox{
+			background-position: 43px 20px;
+		}
 	</style>
 </head>
 <body>
-	<img src="http://p1.bqimg.com/567571/99322cf8c3283e42.png">
+	<div class="img">
+		<input id="radio01" class="rd" type="radio" name="radio">
+		<label for="radio01" class="radio"></label>
+
+		<input id="radio02" class="rd" type="radio" name="radio" checked>
+		<label for="radio02" class="radio"></label>
+
+		<br>
+		<input id="checkbox01" class="ck" type="checkbox" checked>
+		<label for="checkbox01" class="checkbox"></label>
+
+		<input id="checkbox02" class="ck" type="checkbox" checked>
+		<label for="checkbox02" class="checkbox"></label>
+	</div>
 </body>
 </html>
